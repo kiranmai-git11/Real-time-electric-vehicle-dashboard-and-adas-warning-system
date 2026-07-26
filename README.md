@@ -1,58 +1,55 @@
 # 🚗 Real-Time Electric Vehicle Dashboard and ADAS Warning System
 
-> **Embedded Systems Internship Project** developed using the **STM32F103C8T6 Blue Pill Microcontroller** to simulate a Real-Time Electric Vehicle Dashboard integrated with **Advanced Driver Assistance System (ADAS)** features.
-
----
-
-## 📸 Dashboard Preview
+> An Embedded Systems Internship Project developed using the **STM32F103C8T6 Blue Pill Microcontroller** to simulate a Real-Time Electric Vehicle (EV) Dashboard integrated with **Advanced Driver Assistance System (ADAS)** features.
 
 <p align="center">
-  <img src="ES%20images/dashboard.png" alt="EV Dashboard" width="900">
+  <img src="Images/dashboard.png" alt="EV Dashboard" width="900">
 </p>
 
 ---
 
-# 📖 Project Overview
+## 📖 Project Overview
 
-This project demonstrates the implementation of a **Real-Time Electric Vehicle Dashboard** integrated with **Advanced Driver Assistance System (ADAS)** using the **STM32F103C8T6 Blue Pill** microcontroller.
+The **Real-Time Electric Vehicle Dashboard and ADAS Warning System** is an embedded systems project that simulates the functionality of a modern Electric Vehicle dashboard along with basic Advanced Driver Assistance System (ADAS) features.
 
-The system continuously monitors important vehicle parameters such as **Speed, Battery State of Charge (SOC), Motor Temperature, Accelerator Position, Brake Status, and Torque**. It also provides **ADAS safety warnings** using ultrasonic sensor-based obstacle detection.
+The system uses the **STM32F103C8T6 Blue Pill** microcontroller to acquire and process sensor data in real time. Vehicle parameters such as speed, battery level, motor temperature, accelerator position, brake status, and torque are monitored continuously.
 
-Sensor data is processed by the STM32 microcontroller and transmitted through **UART** to a **Python-based graphical dashboard**, where the vehicle status is displayed in real time.
-
----
-
-# 🎯 Objectives
-
-- Simulate a Real-Time Electric Vehicle Dashboard
-- Monitor important EV parameters
-- Implement basic ADAS warning features
-- Read analog sensor values using ADC
-- Process sensor data using STM32
-- Transmit telemetry through UART
-- Visualize data on a Python dashboard
+The processed data is transmitted via **UART** to a **Python-based graphical dashboard**, which displays live vehicle information and safety alerts. Ultrasonic sensors simulate obstacle detection and trigger ADAS warnings when objects are detected within predefined safety distances.
 
 ---
 
-# ✨ Features
+## 🎯 Objectives
+
+- Design a Real-Time Electric Vehicle Dashboard.
+- Simulate EV parameters using embedded hardware.
+- Implement basic ADAS warning functionality.
+- Read analog sensor values using ADC.
+- Process sensor data using the STM32 microcontroller.
+- Communicate data using UART.
+- Display live vehicle information using a Python GUI.
+
+---
+
+## ✨ Features
 
 - 🚗 Real-Time Speed Monitoring
 - 🔋 Battery State of Charge (SOC)
-- 🌡 Motor Temperature Monitoring
-- ⚡ Torque Calculation
-- 🚦 Accelerator & Brake Monitoring
+- 🌡️ Motor Temperature Monitoring
+- ⚡ Torque Monitoring
+- 🚦 Accelerator Position Monitoring
+- 🛑 Brake Status Monitoring
 - 📈 Live Speed History Graph
 - 🚧 Forward Collision Warning
 - 🚙 Bird's Eye ADAS View
 - 🔊 Multi-Level Alarm System
 - 📡 UART Communication
-- 🐍 Python GUI Dashboard
+- 🐍 Python-Based Dashboard
 
 ---
 
-# 🛠 Hardware Used
+## 🛠️ Hardware Components
 
-- STM32F103C8T6 Blue Pill
+- STM32F103C8T6 Blue Pill Microcontroller
 - HC-SR04 Ultrasonic Sensors
 - Potentiometers
 - LEDs
@@ -60,7 +57,7 @@ Sensor data is processed by the STM32 microcontroller and transmitted through **
 
 ---
 
-# 💻 Software Used
+## 💻 Software Used
 
 - STM32CubeMX
 - STM32CubeIDE
@@ -72,84 +69,83 @@ Sensor data is processed by the STM32 microcontroller and transmitted through **
 
 ---
 
-# ⚙️ System Architecture
+## ⚙️ System Architecture
 
 ```text
 Potentiometers
-      │
-      ▼
+       │
+       ▼
 ADC Conversion
-      │
-      ▼
+       │
+       ▼
 STM32F103C8T6 Blue Pill
-      │
- ┌────┴────┐
- │         │
- ▼         ▼
-EV Logic  ADAS Logic
-      │
-      ▼
+       │
+ ┌─────┴────────┐
+ │              │
+ ▼              ▼
+EV Logic     ADAS Logic
+       │
+       ▼
 UART Communication
-      │
-      ▼
+       │
+       ▼
 Python Dashboard
 ```
 
 ---
 
-# 🚀 Working Flow
+## 🔄 Working Principle
 
-1. Potentiometers simulate vehicle parameters.
-2. STM32 reads analog values through ADC.
-3. Embedded C processes the sensor data.
+1. Potentiometers simulate vehicle parameters such as accelerator, brake, battery level, and motor temperature.
+2. The STM32 microcontroller reads these analog values using ADC.
+3. Embedded C firmware processes the sensor data.
 4. Ultrasonic sensors detect nearby obstacles.
-5. UART sends processed data to the PC.
-6. Python receives the data and updates the dashboard.
-7. ADAS warnings are displayed whenever necessary.
+5. Vehicle information and warning messages are transmitted via UART.
+6. The Python dashboard displays live EV data and ADAS alerts in real time.
 
 ---
 
-# 📷 Project Images
+## 📷 Project Images
 
-## EV Dashboard
+### 🚗 EV Dashboard
 
-![Dashboard](ES%20images/dashboard.png)
-
----
-
-## STM32CubeMX Configuration
-
-![STM32CubeMX](ES%20images/stm32cubemx.jpg)
+![Dashboard](Images/dashboard.png)
 
 ---
 
-## PICSimLab Simulation
+### ⚙️ STM32CubeMX Configuration
 
-![PICSimLab](ES%20images/picsimlab-sensors.jpg)
-
----
-
-## STM32 Blue Pill Simulation
-
-![Blue Pill](ES%20images/bluepill.jpg)
+![STM32CubeMX](Images/stm32cubemx.jpg)
 
 ---
 
-## UART Communication
+### 🔌 PICSimLab Simulation
 
-![UART Output](ES%20images/uart-output.jpg)
+![PICSimLab](Images/picsimlab-sensors.jpg)
 
 ---
 
-# 📂 Project Structure
+### 💻 STM32 Blue Pill Simulation
+
+![Blue Pill](Images/bluepill.jpg)
+
+---
+
+### 📡 UART Communication
+
+![UART Output](Images/uart-output.jpg)
+
+---
+
+## 📂 Project Structure
 
 ```text
-ev_dash
+Real-time-electric-vehicle-dashboard-and-adas-warning-system
 │
 ├── Core/
 ├── Drivers/
 ├── Debug/
-├── ES images/
+├── Images/
 │   ├── dashboard.png
 │   ├── stm32cubemx.jpg
 │   ├── picsimlab-sensors.jpg
@@ -159,67 +155,79 @@ ev_dash
 ├── Python.py
 ├── ev_dash.ioc
 ├── README.md
+└── ...
 ```
 
 ---
 
-# 🚀 How to Run
+## 🚀 Getting Started
 
-1. Open the project in **STM32CubeIDE**.
-2. Build and flash the firmware to the STM32 Blue Pill.
-3. Configure the UART communication.
+1. Open the project using **STM32CubeIDE**.
+2. Build and flash the firmware to the STM32F103C8T6 Blue Pill.
+3. Configure UART communication.
 4. Run the Python dashboard application.
-5. Simulate sensor values using PICSimLab.
-6. Observe the real-time dashboard and ADAS alerts.
+5. Simulate sensor inputs using PICSimLab.
+6. Observe live dashboard updates and ADAS warning messages.
 
 ---
 
-# 🎓 Learning Outcomes
+## 📈 Applications
 
-This project helped me gain practical experience in:
+- Electric Vehicle Dashboard Simulation
+- Automotive Embedded Systems
+- ADAS Concept Demonstration
+- Embedded Systems Learning
+- Academic and Internship Projects
+
+---
+
+## 🎓 Learning Outcomes
+
+Through this project, I gained practical experience in:
 
 - Embedded C Programming
-- STM32 Microcontroller Development
-- ADC Programming
+- STM32 Microcontroller Programming
+- ADC Configuration
 - UART Communication
 - Sensor Interfacing
 - Python GUI Development
+- PICSimLab Simulation
 - Automotive Embedded Systems
-- EV Dashboard Design
+- Electric Vehicle Dashboard Design
 - ADAS Fundamentals
 
 ---
 
-# 🔮 Future Enhancements
+## 🔮 Future Enhancements
 
-- GPS Integration
 - CAN Bus Communication
+- GPS Integration
 - IoT Cloud Connectivity
 - Battery Management System (BMS)
 - Lane Departure Warning
 - Driver Drowsiness Detection
-- Mobile Application Integration
+- Mobile Application Support
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
 **Kiranmai Kandhari**
 
-🎓 B.Tech – Electronics and Communication Engineering
+**B.Tech – Electronics and Communication Engineering**
 
-💻 GitHub: https://github.com/kiranmai-git11
+🔗 GitHub: https://github.com/kiranmai-git11
 
 ---
 
-# 🙏 Acknowledgement
+## 🙏 Acknowledgement
 
-This project was developed as part of my **Embedded Systems Internship at Emertxe Information Technologies**.
+This project was developed during my **Embedded Systems Internship at Emertxe Information Technologies**.
 
 I sincerely thank my mentors and the Emertxe team for their continuous guidance and support throughout the internship.
 
 ---
 
-⭐ **If you found this project interesting, please consider giving it a Star on GitHub!**
+## ⭐ Support
 
-
+If you found this project helpful or interesting, please consider giving it a **⭐ Star** on GitHub.
